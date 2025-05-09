@@ -1,3 +1,7 @@
+"""
+Jeder Buchstabe wird um x Stellen (relativ zum Alphabet) verschoben.
+"""
+
 def Enc(key, message):
     cypher = ""
     message = message.upper()

@@ -25,9 +25,21 @@ def Dec(k, c):
             message += m_buchst
     return message
 
+def Brute_Force_Message(c):
+    for i in range(26):
+        print(f"{i}: {Dec(i, c)}")
 
 
 if __name__ == "__main__":
+    # Verschlüsseln einer Nachricht
+    message = "Dies ist eine sehr geheime Nachricht"
+    cypher = Enc(3, message)
+    print(message, " -> ", cypher)
+
+    # Entschlüsseln einer Nachricht
+    message = Dec(3, cypher)
+    print(cypher, " -> ", message)
+
+    # Brute Force Message
     cypher = "fbrp kyv jvtlizkp fw trvjri tzgyvij gifsrscp yru efkyzex kf uf nzky kyv rjjrjjzerkzfe slk zk drbvj wfi r xffu jkfip"
-    for i in range(26):
-        print(f"{i}: {Dec(i, cypher)}")
+    Brute_Force_Message(cypher)
